@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_82e9acc4d13e2d83f754c9b7f8d050b4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_82e9acc4d13e2d83f754c9b7f8d050b4" ></div>
+        
+</body>
+<script>    
+    
+            var map_82e9acc4d13e2d83f754c9b7f8d050b4 = L.map(
+                "map_82e9acc4d13e2d83f754c9b7f8d050b4",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e326cc87e5b7f44db03a11f1d58c065f = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_82e9acc4d13e2d83f754c9b7f8d050b4);
+        
+    
+            var marker_cluster_b7565f358b9bcfa5156c956f5f75ff01 = L.markerClusterGroup(
+                {}
+            );
+            map_82e9acc4d13e2d83f754c9b7f8d050b4.addLayer(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            var circle_marker_c4e5e77f686cc99db92b05a3697d26fc = L.circleMarker(
+                [41.000028, 19.9999619],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_c4e5e77f686cc99db92b05a3697d26fc.bindTooltip(
+                `<div>
+                     Country : Albania<br> Downloads : 4.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6922f45870757f882ca22885c25a7a79 = L.circleMarker(
+                [28.0000272, 2.9999825],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_6922f45870757f882ca22885c25a7a79.bindTooltip(
+                `<div>
+                     Country : Algeria<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_85bbd1c7e14868edd27249f2a64c505e = L.circleMarker(
+                [-34.9964963, -64.9672817],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_85bbd1c7e14868edd27249f2a64c505e.bindTooltip(
+                `<div>
+                     Country : Argentina<br> Downloads : 47.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5eab1202014bbc7951da8992bc637824 = L.circleMarker(
+                [40.7696272, 44.6736646],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_5eab1202014bbc7951da8992bc637824.bindTooltip(
+                `<div>
+                     Country : Armenia<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8987195dca3b29e97830b23d4f59cd35 = L.circleMarker(
+                [-24.7761086, 134.755],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 70, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_8987195dca3b29e97830b23d4f59cd35.bindTooltip(
+                `<div>
+                     Country : Australia<br> Downloads : 537.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f549c2065e2c05f08ef50bc019abce5 = L.circleMarker(
+                [47.59397, 14.12456],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_4f549c2065e2c05f08ef50bc019abce5.bindTooltip(
+                `<div>
+                     Country : Austria<br> Downloads : 74.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5a43b66d1d70a2f837c5f53051ecb38c = L.circleMarker(
+                [40.3936294, 47.7872508],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_5a43b66d1d70a2f837c5f53051ecb38c.bindTooltip(
+                `<div>
+                     Country : Azerbaijan<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f11de9c57c253bf74b4cc4a71a104b56 = L.circleMarker(
+                [26.1551249, 50.5344606],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_f11de9c57c253bf74b4cc4a71a104b56.bindTooltip(
+                `<div>
+                     Country : Bahrain<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bfee18482f2f85aa3f3c10067716c873 = L.circleMarker(
+                [24.4769288, 90.2934413],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_bfee18482f2f85aa3f3c10067716c873.bindTooltip(
+                `<div>
+                     Country : Bangladesh<br> Downloads : 4.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e90fb5ef996a45ef34988665bae3fd2b = L.circleMarker(
+                [13.1500331, -59.5250305],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e90fb5ef996a45ef34988665bae3fd2b.bindTooltip(
+                `<div>
+                     Country : Barbados<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a5a261cf8ebba60e716b72887c3d9a65 = L.circleMarker(
+                [50.6402809, 4.6667145],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a5a261cf8ebba60e716b72887c3d9a65.bindTooltip(
+                `<div>
+                     Country : Belgium<br> Downloads : 42.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9e1027d538a297987bfbe34eb3cd6697 = L.circleMarker(
+                [9.5293472, 2.2584408],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_9e1027d538a297987bfbe34eb3cd6697.bindTooltip(
+                `<div>
+                     Country : Benin<br> Downloads : 5.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f00df3978bb0456f5246b82121e829c1 = L.circleMarker(
+                [-10.3333333, -53.2],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_f00df3978bb0456f5246b82121e829c1.bindTooltip(
+                `<div>
+                     Country : Brazil<br> Downloads : 52.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_11290d70145f408041ccdbe2cd93cacd = L.circleMarker(
+                [4.4137155, 114.5653908],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_11290d70145f408041ccdbe2cd93cacd.bindTooltip(
+                `<div>
+                     Country : Brunei Darussalam<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49ed8acb777f6069166b7382126e4f8c = L.circleMarker(
+                [42.6073975, 25.4856617],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_49ed8acb777f6069166b7382126e4f8c.bindTooltip(
+                `<div>
+                     Country : Bulgaria<br> Downloads : 10.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c3b558142b9583075eabd9bd2daa4d7b = L.circleMarker(
+                [12.5433216, 104.8144914],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_c3b558142b9583075eabd9bd2daa4d7b.bindTooltip(
+                `<div>
+                     Country : Cambodia<br> Downloads : 3.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2216a66d47d696ca35fabb02f79017fa = L.circleMarker(
+                [61.0666922, -107.991707],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 70, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_2216a66d47d696ca35fabb02f79017fa.bindTooltip(
+                `<div>
+                     Country : Canada<br> Downloads : 559.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1609d15739db133609217bd955a8e7a7 = L.circleMarker(
+                [-31.7613365, -71.3187697],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_1609d15739db133609217bd955a8e7a7.bindTooltip(
+                `<div>
+                     Country : Chile<br> Downloads : 5.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e6e587bebc92f4d1eab59491e4dbdb2f = L.circleMarker(
+                [35.000074, 104.999927],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 70, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e6e587bebc92f4d1eab59491e4dbdb2f.bindTooltip(
+                `<div>
+                     Country : China<br> Downloads : 878.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5df145d9857996cfaf672ca8d778b9a2 = L.circleMarker(
+                [4.099917, -72.9088133],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_5df145d9857996cfaf672ca8d778b9a2.bindTooltip(
+                `<div>
+                     Country : Colombia<br> Downloads : 17.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8f05e65aba7f4276f93de49b789ccf6 = L.circleMarker(
+                [-2.9814344, 23.8222636],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a8f05e65aba7f4276f93de49b789ccf6.bindTooltip(
+                `<div>
+                     Country : Congo, The Democratic Republic of the<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be866c60d4275c854666568f1667c3b9 = L.circleMarker(
+                [10.2735633, -84.0739102],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_be866c60d4275c854666568f1667c3b9.bindTooltip(
+                `<div>
+                     Country : Costa Rica<br> Downloads : 7.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e564aaf5bb20d65bfdbfe7b08d1b0805 = L.circleMarker(
+                [45.5643442, 17.0118954],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e564aaf5bb20d65bfdbfe7b08d1b0805.bindTooltip(
+                `<div>
+                     Country : Croatia<br> Downloads : 11.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9fe3666886e8e657503a88fa93c567b1 = L.circleMarker(
+                [12.21339425, -69.0408499891],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_9fe3666886e8e657503a88fa93c567b1.bindTooltip(
+                `<div>
+                     Country : Curaçao<br> Downloads : 6.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_78f551c62f42111b2376607d8f04db31 = L.circleMarker(
+                [34.9823018, 33.1451285],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_78f551c62f42111b2376607d8f04db31.bindTooltip(
+                `<div>
+                     Country : Cyprus<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f268a6883c00b3ec667c0b03128418a9 = L.circleMarker(
+                [49.7439047, 15.3381061],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_f268a6883c00b3ec667c0b03128418a9.bindTooltip(
+                `<div>
+                     Country : Czech Republic<br> Downloads : 27.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dae2b8335387de37af300e2ec93a5b40 = L.circleMarker(
+                [55.670249, 10.3333283],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_dae2b8335387de37af300e2ec93a5b40.bindTooltip(
+                `<div>
+                     Country : Denmark<br> Downloads : 61.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e9f769a786b3491661a5c7a403f222f6 = L.circleMarker(
+                [-1.3397668, -79.3666965],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e9f769a786b3491661a5c7a403f222f6.bindTooltip(
+                `<div>
+                     Country : Ecuador<br> Downloads : 7.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9519d253b73e4e0c1a0ff6a717358499 = L.circleMarker(
+                [26.2540493, 29.2675469],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_9519d253b73e4e0c1a0ff6a717358499.bindTooltip(
+                `<div>
+                     Country : Egypt<br> Downloads : 9.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3b436d9ae5d1dc8f3b0c5b3314d86b43 = L.circleMarker(
+                [58.7523778, 25.3319078],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_3b436d9ae5d1dc8f3b0c5b3314d86b43.bindTooltip(
+                `<div>
+                     Country : Estonia<br> Downloads : 4.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_67acf993665c89b4171db858b150790e = L.circleMarker(
+                [10.2116702, 38.6521203],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_67acf993665c89b4171db858b150790e.bindTooltip(
+                `<div>
+                     Country : Ethiopia<br> Downloads : 14.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af89890d958b88a4ac2dad7e8a155f7e = L.circleMarker(
+                [63.2467777, 25.9209164],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_af89890d958b88a4ac2dad7e8a155f7e.bindTooltip(
+                `<div>
+                     Country : Finland<br> Downloads : 45.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0482f35bdaf7720ea1187e70c940ef97 = L.circleMarker(
+                [46.603354, 1.8883335],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_0482f35bdaf7720ea1187e70c940ef97.bindTooltip(
+                `<div>
+                     Country : France<br> Downloads : 185.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_75599bbc5c156a34f799bda7113ba3ef = L.circleMarker(
+                [41.6809707, 44.0287382],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_75599bbc5c156a34f799bda7113ba3ef.bindTooltip(
+                `<div>
+                     Country : Georgia<br> Downloads : 8.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5082b0a3481939535d63a200774f4c75 = L.circleMarker(
+                [51.1638175, 10.4478313],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 70, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_5082b0a3481939535d63a200774f4c75.bindTooltip(
+                `<div>
+                     Country : Germany<br> Downloads : 444.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d9feb2b3ef6dd9e77fe38f8db59d6782 = L.circleMarker(
+                [8.0300284, -1.0800271],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_d9feb2b3ef6dd9e77fe38f8db59d6782.bindTooltip(
+                `<div>
+                     Country : Ghana<br> Downloads : 10.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa44321050b1265eff8716338602add0 = L.circleMarker(
+                [38.9953683, 21.9877132],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_fa44321050b1265eff8716338602add0.bindTooltip(
+                `<div>
+                     Country : Greece<br> Downloads : 21.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3596520ca9b60991b09ed59e01afc05e = L.circleMarker(
+                [15.5855545, -90.345759],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_3596520ca9b60991b09ed59e01afc05e.bindTooltip(
+                `<div>
+                     Country : Guatemala<br> Downloads : 3.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5c65c160a9d47336d899e446dc4e32ab = L.circleMarker(
+                [15.2572432, -86.0755145],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_5c65c160a9d47336d899e446dc4e32ab.bindTooltip(
+                `<div>
+                     Country : Honduras<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b474101ec78fc2f637bfdf28b439cb67 = L.circleMarker(
+                [22.2793278, 114.1628131],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_b474101ec78fc2f637bfdf28b439cb67.bindTooltip(
+                `<div>
+                     Country : Hong Kong<br> Downloads : 38.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_647146c054b94b37c36cd8e7db3c91a7 = L.circleMarker(
+                [22.3511148, 78.6677428],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 70, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_647146c054b94b37c36cd8e7db3c91a7.bindTooltip(
+                `<div>
+                     Country : India<br> Downloads : 854.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a148a220be136c6073c27ac6941869db = L.circleMarker(
+                [-2.4833826, 117.8902853],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a148a220be136c6073c27ac6941869db.bindTooltip(
+                `<div>
+                     Country : Indonesia<br> Downloads : 17.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_144aeb8bb4abbef4af9713bd908a3723 = L.circleMarker(
+                [32.6475314, 54.5643516],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_144aeb8bb4abbef4af9713bd908a3723.bindTooltip(
+                `<div>
+                     Country : Iran, Islamic Republic of<br> Downloads : 15.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_63ef4959dc08fee94cf7be6187f16200 = L.circleMarker(
+                [33.0955793, 44.1749775],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_63ef4959dc08fee94cf7be6187f16200.bindTooltip(
+                `<div>
+                     Country : Iraq<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_42b61e26395cb571d9344fcc9b1d7c4d = L.circleMarker(
+                [52.865196, -7.9794599],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_42b61e26395cb571d9344fcc9b1d7c4d.bindTooltip(
+                `<div>
+                     Country : Ireland<br> Downloads : 40.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_06fa6bf71868407e6e34499721bf2bc2 = L.circleMarker(
+                [54.1936805, -4.5591148],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_06fa6bf71868407e6e34499721bf2bc2.bindTooltip(
+                `<div>
+                     Country : Isle of Man<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_971c092043f3c746438bf16295b29d16 = L.circleMarker(
+                [30.8124247, 34.8594762],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_971c092043f3c746438bf16295b29d16.bindTooltip(
+                `<div>
+                     Country : Israel<br> Downloads : 38.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e53e156111546f0af18bc6218dc9740b = L.circleMarker(
+                [42.6384261, 12.674297],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e53e156111546f0af18bc6218dc9740b.bindTooltip(
+                `<div>
+                     Country : Italy<br> Downloads : 74.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af2932aea8614e9f2850ac8aedbbbac9 = L.circleMarker(
+                [18.1850507, -77.3947693],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_af2932aea8614e9f2850ac8aedbbbac9.bindTooltip(
+                `<div>
+                     Country : Jamaica<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e4990189f6e73f699c1c3079978de818 = L.circleMarker(
+                [36.5748441, 139.2394179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e4990189f6e73f699c1c3079978de818.bindTooltip(
+                `<div>
+                     Country : Japan<br> Downloads : 382.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eec625c4c6ab751a0035cb71489573b5 = L.circleMarker(
+                [31.1667049, 36.941628],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_eec625c4c6ab751a0035cb71489573b5.bindTooltip(
+                `<div>
+                     Country : Jordan<br> Downloads : 5.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e6ae2bbe1584777c385829bd11dc293c = L.circleMarker(
+                [48.1012954, 66.7780818],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e6ae2bbe1584777c385829bd11dc293c.bindTooltip(
+                `<div>
+                     Country : Kazakhstan<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_04d3039a66d4f0d053a2f938c61b65cc = L.circleMarker(
+                [1.4419683, 38.4313975],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_04d3039a66d4f0d053a2f938c61b65cc.bindTooltip(
+                `<div>
+                     Country : Kenya<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f3315c09f0a7d361e52ded862444b763 = L.circleMarker(
+                [36.638392, 127.6961188],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_f3315c09f0a7d361e52ded862444b763.bindTooltip(
+                `<div>
+                     Country : Korea, Republic of<br> Downloads : 22.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_04bba0da24e8ddaf7cb992f8aceb6a0b = L.circleMarker(
+                [56.8406494, 24.7537645],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_04bba0da24e8ddaf7cb992f8aceb6a0b.bindTooltip(
+                `<div>
+                     Country : Latvia<br> Downloads : 5.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3bae00bb17ff9ed8c5ab6ac14f9b5a29 = L.circleMarker(
+                [33.8750629, 35.843409],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_3bae00bb17ff9ed8c5ab6ac14f9b5a29.bindTooltip(
+                `<div>
+                     Country : Lebanon<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_22ce29294529f9fe7da70d41f43b0164 = L.circleMarker(
+                [55.3500003, 23.7499997],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_22ce29294529f9fe7da70d41f43b0164.bindTooltip(
+                `<div>
+                     Country : Lithuania<br> Downloads : 3.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_39a6ea6704d63a0f0c5c8f2d856dd970 = L.circleMarker(
+                [49.8158683, 6.1296751],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_39a6ea6704d63a0f0c5c8f2d856dd970.bindTooltip(
+                `<div>
+                     Country : Luxembourg<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ed1b2efd8afff8ecf2b65f1388064992 = L.circleMarker(
+                [22.1899448, 113.5380454],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_ed1b2efd8afff8ecf2b65f1388064992.bindTooltip(
+                `<div>
+                     Country : Macao<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_06e2a06fcd60f2b718e957d48d3f42a3 = L.circleMarker(
+                [40.6289184, 22.9453734],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_06e2a06fcd60f2b718e957d48d3f42a3.bindTooltip(
+                `<div>
+                     Country : Macedonia, Republic of<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e0d0a7f1d40411508d95cc29cd16f4f0 = L.circleMarker(
+                [-18.9249604, 46.4416422],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e0d0a7f1d40411508d95cc29cd16f4f0.bindTooltip(
+                `<div>
+                     Country : Madagascar<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_20cb7b3fb22c306c623b6093502884d7 = L.circleMarker(
+                [4.5693754, 102.2656823],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_20cb7b3fb22c306c623b6093502884d7.bindTooltip(
+                `<div>
+                     Country : Malaysia<br> Downloads : 44.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_169bc6a429a13efb53d26995ba83f3de = L.circleMarker(
+                [35.8885993, 14.4476911],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_169bc6a429a13efb53d26995ba83f3de.bindTooltip(
+                `<div>
+                     Country : Malta<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f0e90f750b118a6b6c37dfdb47391135 = L.circleMarker(
+                [23.6585116, -102.0077097],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_f0e90f750b118a6b6c37dfdb47391135.bindTooltip(
+                `<div>
+                     Country : Mexico<br> Downloads : 21.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_43263b572ad8298d3b5b5455cec3ecf3 = L.circleMarker(
+                [46.6745434, 29.7521996],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_43263b572ad8298d3b5b5455cec3ecf3.bindTooltip(
+                `<div>
+                     Country : Moldova, Republic of<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8506da32b608f537485aa7572bf2ba4 = L.circleMarker(
+                [46.8250388, 103.8499736],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a8506da32b608f537485aa7572bf2ba4.bindTooltip(
+                `<div>
+                     Country : Mongolia<br> Downloads : 4.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4b2a387c4a33be757036048b741032da = L.circleMarker(
+                [42.9868853, 19.5180992],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_4b2a387c4a33be757036048b741032da.bindTooltip(
+                `<div>
+                     Country : Montenegro<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_46f20f13b3f3079da695ceb50cfd2027 = L.circleMarker(
+                [31.1728205, -7.3362482],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_46f20f13b3f3079da695ceb50cfd2027.bindTooltip(
+                `<div>
+                     Country : Morocco<br> Downloads : 4.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3c7a42c1f5179a736e41c25aca508ca0 = L.circleMarker(
+                [-23.2335499, 17.3231107],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_3c7a42c1f5179a736e41c25aca508ca0.bindTooltip(
+                `<div>
+                     Country : Namibia<br> Downloads : 3.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab69d9508769697f711032ccc370f03f = L.circleMarker(
+                [28.1083929, 84.0917139],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_ab69d9508769697f711032ccc370f03f.bindTooltip(
+                `<div>
+                     Country : Nepal<br> Downloads : 4.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e43951affb083f12084e33303947b422 = L.circleMarker(
+                [52.2434979, 5.6343227],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e43951affb083f12084e33303947b422.bindTooltip(
+                `<div>
+                     Country : Netherlands<br> Downloads : 325.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6fa8986fa7a10db81953d7177a4481bb = L.circleMarker(
+                [-41.5000831, 172.8344077],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_6fa8986fa7a10db81953d7177a4481bb.bindTooltip(
+                `<div>
+                     Country : New Zealand<br> Downloads : 44.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76ff7a1b15125b18a80363b6f9d8d3d6 = L.circleMarker(
+                [9.6000359, 7.9999721],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_76ff7a1b15125b18a80363b6f9d8d3d6.bindTooltip(
+                `<div>
+                     Country : Nigeria<br> Downloads : 28.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_585d50fcc2a977dcf0b170b7adb3e27c = L.circleMarker(
+                [60.5000209, 9.0999715],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_585d50fcc2a977dcf0b170b7adb3e27c.bindTooltip(
+                `<div>
+                     Country : Norway<br> Downloads : 163.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_96917969660a538585daa6256d171f70 = L.circleMarker(
+                [30.3308401, 71.247499],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_96917969660a538585daa6256d171f70.bindTooltip(
+                `<div>
+                     Country : Pakistan<br> Downloads : 17.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d2871bdc396200fcede246ef2b14b8a1 = L.circleMarker(
+                [-5.6816069, 144.2489081],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_d2871bdc396200fcede246ef2b14b8a1.bindTooltip(
+                `<div>
+                     Country : Papua New Guinea<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a613afc34da077bd40b8b79e12f865bd = L.circleMarker(
+                [-6.8699697, -75.0458515],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a613afc34da077bd40b8b79e12f865bd.bindTooltip(
+                `<div>
+                     Country : Peru<br> Downloads : 3.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dd9f1a29077fd066379c8c1cbf885906 = L.circleMarker(
+                [12.7503486, 122.7312101],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_dd9f1a29077fd066379c8c1cbf885906.bindTooltip(
+                `<div>
+                     Country : Philippines<br> Downloads : 39.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b82de22126ba436bae9fde3dd042374b = L.circleMarker(
+                [52.215933, 19.134422],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_b82de22126ba436bae9fde3dd042374b.bindTooltip(
+                `<div>
+                     Country : Poland<br> Downloads : 25.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e7d04515b0e7930969da7b36614f9c49 = L.circleMarker(
+                [39.6621648, -8.1353519],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e7d04515b0e7930969da7b36614f9c49.bindTooltip(
+                `<div>
+                     Country : Portugal<br> Downloads : 17.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_433cdb8a304c480bf38e40f61121e415 = L.circleMarker(
+                [18.2247706, -66.4858295],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_433cdb8a304c480bf38e40f61121e415.bindTooltip(
+                `<div>
+                     Country : Puerto Rico<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ccd405a5d0675f46ffcc17b0483a25c2 = L.circleMarker(
+                [25.3336984, 51.2295295],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_ccd405a5d0675f46ffcc17b0483a25c2.bindTooltip(
+                `<div>
+                     Country : Qatar<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a5f6f65fadaf4c44d269a58a0bf2eeec = L.circleMarker(
+                [45.9852129, 24.6859225],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a5f6f65fadaf4c44d269a58a0bf2eeec.bindTooltip(
+                `<div>
+                     Country : Romania<br> Downloads : 62.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4aa4c0d3bdd1d0413d20eba8bac9ffde = L.circleMarker(
+                [64.6863136, 97.7453061],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_4aa4c0d3bdd1d0413d20eba8bac9ffde.bindTooltip(
+                `<div>
+                     Country : Russian Federation<br> Downloads : 216.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_89b6b153d4da33381d15f65e006b32aa = L.circleMarker(
+                [25.6242618, 42.3528328],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_89b6b153d4da33381d15f65e006b32aa.bindTooltip(
+                `<div>
+                     Country : Saudi Arabia<br> Downloads : 20.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_896c571d176cb6b95134763ef56dfdc6 = L.circleMarker(
+                [44.1534121, 20.55144],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_896c571d176cb6b95134763ef56dfdc6.bindTooltip(
+                `<div>
+                     Country : Serbia<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_67b206e24027e56c0683c89037e16f83 = L.circleMarker(
+                [-4.6574977, 55.4540146],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_67b206e24027e56c0683c89037e16f83.bindTooltip(
+                `<div>
+                     Country : Seychelles<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b740abfd00fd51ca1f31dd3331c1160f = L.circleMarker(
+                [1.357107, 103.8194992],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_b740abfd00fd51ca1f31dd3331c1160f.bindTooltip(
+                `<div>
+                     Country : Singapore<br> Downloads : 72.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_206488dd80f235bfbdae45f7a8a54ba5 = L.circleMarker(
+                [48.7411522, 19.4528646],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_206488dd80f235bfbdae45f7a8a54ba5.bindTooltip(
+                `<div>
+                     Country : Slovakia<br> Downloads : 7.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_79f0ed2b5ffd5ebe942b64d3f2e13827 = L.circleMarker(
+                [45.8133113, 14.4808369],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_79f0ed2b5ffd5ebe942b64d3f2e13827.bindTooltip(
+                `<div>
+                     Country : Slovenia<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c5ffd87b2cc932d72f5f0f071325372e = L.circleMarker(
+                [-28.8166236, 24.991639],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_c5ffd87b2cc932d72f5f0f071325372e.bindTooltip(
+                `<div>
+                     Country : South Africa<br> Downloads : 42.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1964afd89076dcdcecc5cc936266ab91 = L.circleMarker(
+                [39.3260685, -4.8379791],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_1964afd89076dcdcecc5cc936266ab91.bindTooltip(
+                `<div>
+                     Country : Spain<br> Downloads : 23.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b57024ad378b1dc5a397ebd8956a862c = L.circleMarker(
+                [7.5554942, 80.7137847],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_b57024ad378b1dc5a397ebd8956a862c.bindTooltip(
+                `<div>
+                     Country : Sri Lanka<br> Downloads : 59.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a0115d9f835fe97c6741d298cfe5e6b9 = L.circleMarker(
+                [14.5844444, 29.4917691],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_a0115d9f835fe97c6741d298cfe5e6b9.bindTooltip(
+                `<div>
+                     Country : Sudan<br> Downloads : 2.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8b7f530aa400f9188045ce7c266a3759 = L.circleMarker(
+                [59.6749712, 14.5208584],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_8b7f530aa400f9188045ce7c266a3759.bindTooltip(
+                `<div>
+                     Country : Sweden<br> Downloads : 70.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bcc21b60d22193bdd40d386d2c99ea2d = L.circleMarker(
+                [46.7985624, 8.2319736],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_bcc21b60d22193bdd40d386d2c99ea2d.bindTooltip(
+                `<div>
+                     Country : Switzerland<br> Downloads : 69.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_216717581753eb9a5d740c74e0cf424e = L.circleMarker(
+                [34.6401861, 39.0494106],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_216717581753eb9a5d740c74e0cf424e.bindTooltip(
+                `<div>
+                     Country : Syrian Arab Republic<br> Downloads : 3.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_347a27490cd333f2cd45cf6226b36838 = L.circleMarker(
+                [23.9739374, 120.9820179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_347a27490cd333f2cd45cf6226b36838.bindTooltip(
+                `<div>
+                     Country : Taiwan<br> Downloads : 10.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9127a0c57a11e6af0000e6b485583085 = L.circleMarker(
+                [-6.5247123, 35.7878438],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_9127a0c57a11e6af0000e6b485583085.bindTooltip(
+                `<div>
+                     Country : Tanzania, United Republic of<br> Downloads : 1.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e086a853a92a915bf051a43fd8dd1b59 = L.circleMarker(
+                [14.8971921, 100.83273],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e086a853a92a915bf051a43fd8dd1b59.bindTooltip(
+                `<div>
+                     Country : Thailand<br> Downloads : 16.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24954cb68a9c4c8309ddb2f940ccfc98 = L.circleMarker(
+                [33.8439408, 9.400138],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_24954cb68a9c4c8309ddb2f940ccfc98.bindTooltip(
+                `<div>
+                     Country : Tunisia<br> Downloads : 8.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d71fa0ce49e1283b70a7bed06c7f0b54 = L.circleMarker(
+                [38.9597594, 34.9249653],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_d71fa0ce49e1283b70a7bed06c7f0b54.bindTooltip(
+                `<div>
+                     Country : Turkey<br> Downloads : 14.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49bf9a54883b7c843bbd7da45ca3de7b = L.circleMarker(
+                [1.5333554, 32.2166578],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_49bf9a54883b7c843bbd7da45ca3de7b.bindTooltip(
+                `<div>
+                     Country : Uganda<br> Downloads : 5.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7d91803cb76b06976af60743227fe236 = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_7d91803cb76b06976af60743227fe236.bindTooltip(
+                `<div>
+                     Country : Ukraine<br> Downloads : 34.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_152d41ec8fc73a1cb9726a1636de4eb1 = L.circleMarker(
+                [24.0002488, 53.9994829],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_152d41ec8fc73a1cb9726a1636de4eb1.bindTooltip(
+                `<div>
+                     Country : United Arab Emirates<br> Downloads : 11.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e18217ffea3c46dfe0161e1b5071da9b = L.circleMarker(
+                [54.7023545, -3.2765753],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_e18217ffea3c46dfe0161e1b5071da9b.bindTooltip(
+                `<div>
+                     Country : United Kingdom<br> Downloads : 383.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ba91580bceb95f2e43d3cbedb35f0dcc = L.circleMarker(
+                [39.7837304, -100.445882],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 90, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_ba91580bceb95f2e43d3cbedb35f0dcc.bindTooltip(
+                `<div>
+                     Country : United States<br> Downloads : 5358.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0339db390f61563f0485bb048a38c3e6 = L.circleMarker(
+                [41.32373, 63.9528098],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_0339db390f61563f0485bb048a38c3e6.bindTooltip(
+                `<div>
+                     Country : Uzbekistan<br> Downloads : 5.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_082e8bcca5fc7fce153d8d42c12ecdfa = L.circleMarker(
+                [15.9266657, 107.9650855],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b7565f358b9bcfa5156c956f5f75ff01);
+        
+    
+            circle_marker_082e8bcca5fc7fce153d8d42c12ecdfa.bindTooltip(
+                `<div>
+                     Country : Viet Nam<br> Downloads : 39.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
