@@ -47,7 +47,7 @@ def read_data():
       df.rename(mapper={'Count':month},axis=1,inplace=True)
       data=data.merge(df,how='outer',on='Country')
   data=data.set_index('Country')
-  if not np.diff(months_12).all():
+  if not (np.diff(months_12)==1).all():
     logger.error('File set is not contiguous months')
     sys.exit(-2)
   data.fillna(0,inplace=True)
