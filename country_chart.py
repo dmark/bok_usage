@@ -2,7 +2,10 @@
 '''Main program to create country chart based on usage data from Janeway'''
 
 import json
+import logging
 import math
+import os
+import sys
 
 import folium
 from folium.plugins import MarkerCluster
@@ -11,19 +14,53 @@ import geopy.extra.rate_limiter as rl
 import numpy as np
 import pandas as pd
 
+logging.basicConfig(level=logging.INFO)
+logger=logging.getLogger(__name__ )
+
+def base_12(yyyymm) -> int:
+  'convert yyyymm to base 12'
+  ym=yyyymm-1
+  y=ym//100
+  m=ym % 100
+  r=1+m+y*12
+  return r
 
 def read_data():
-  '''Read the data and summarizes into calendar quarters
-  returns: a dataframe with quarter values with the country as index'''
-  in_file='data/BoK-geographic-202003-202210.xlsx'
-  df=pd.read_excel(in_file)
-  df.fillna(0,inplace=True)
-  df=df.set_index('Country')
+  '''Read the data from the csv files exported from Janeway
+  returns: a dataframe with monthly values with the country as index'''
+  file_path='data/'
+  files=os.listdir(file_path)
+  files.sort()
+  data=pd.DataFrame(columns=['Country'])
+  months_12=[] # months base 12 for continuity check
+  for file_name in files:
+    if file_name.startswith('bok_geo_use_'):
+      month=file_name.split('_')[-1].split('.')[0]
+      try:
+        month=int(month)
+        months_12.append(base_12(month))
+      except ValueError:
+        logger.error('Bad file name: %s' % (file_name))
+        sys.exit(-1)
+      df=pd.read_csv(file_path+file_name,sep=',',encoding='utf-8')
+      df.dropna(axis=0,how='any',inplace=True)
+      df.rename(mapper={'Count':month},axis=1,inplace=True)
+      data=data.merge(df,how='outer',on='Country')
+  data=data.set_index('Country')
+  if not np.diff(months_12).all():
+    logger.error('File set is not contiguous months')
+    sys.exit(-2)
+  data.fillna(0,inplace=True)
+  logger.info('Data read for %d months'% len(months_12))
+  return data
+
+def to_quarters(df) -> pd.DataFrame:
+  '''collapse the monthly series into quarters, returning a new dataframe'''
   qdf=pd.DataFrame(index=df.index)
   qs=[]
   for c in df.columns:
-    q=1+(c.month-1)//3
-    qs+=[q+100*c.year]
+    q=1+((c%100)-1)//3
+    qs+=[q+100*(c//100)]
   qm=pd.DataFrame(zip(df.columns,qs),columns=['month','quarter'])
   uq=pd.unique(qs)
   for qtr in uq:
@@ -42,18 +79,27 @@ def geolocate(geocoder,country):
   '''
 
   # Geolocate the center of the country
-  special=['Georgia','Korea, Republic of','Palestine, State of']
-  if country=='Georgia':
-    loc= geocoder(country,country_codes='ge')
-
-  if country.startswith('Korea'):
-    loc= geocoder('Korea',country_codes='kr')
-
-  if country.startswith('Palestine'):
-    loc= geocoder('Palestine',country_codes='ps')
-
-  if country not in special:
+  special={}
+  special['Georgia']={
+    'country':'Georgia',
+    'country_code':'ge'}
+  special['Korea, Republic of']={
+    'country':'Korea',
+    'country_code':'kr'}
+  special['Palestine, State of']={
+    'country':'Palestine',
+    'country_code':'ps'}
+  special['Taiwan, Province of China']={
+    'country':'Taiwan',
+    'country_code':'tw'}
+  if country in special:
+    alt_info=special[country]
+    loc=geocoder(alt_info['country'],country_codes=alt_info['country_code'])
+  else:
     loc = geocoder(country)
+    if loc is None:
+      logger.error('Unable to geo-locate country: %s'%country)
+      sys.exit(-3)
   # And return latitude and longitude
   return (loc.latitude, loc.longitude)
 
@@ -115,13 +161,13 @@ def lat_longs(geocoder,df):
   for ix,_ in df.iterrows():
     if ix in cache:
       lat_long=(cache[ix]['lat'],cache[ix]['long'])
-      print(ix + ' hit')
+      logger.debug(ix + ' cache hit')
     else:
       print(ix +' miss')
       lat_long=geolocate(geocoder,ix)
     df.loc[ix,'lat']=lat_long[0]
     df.loc[ix,'long']=lat_long[1]
-  print('-')
+  logger.info('All coordinates OK')
   df[['lat','long']].to_json(cache_name,orient='index')
   return df
 
@@ -129,17 +175,23 @@ def lat_longs(geocoder,df):
 
 
 def main():
-  '''create'''
-  qdf=read_data()
+  '''create the html page'''
+  df=read_data()
+  months=df.columns
+  qdf=to_quarters(df)
   geolocator = Nominatim(user_agent='bok_country_chart')
   geocoder = rl.RateLimiter(geolocator.geocode, min_delay_seconds=1)
 
   df=lat_longs(geocoder,qdf)
   world_map=create_chart(df)
   #show the map
-  out_file='data/bok_chart_2022_10.html'
+  # construct a file name
+  out_file='data/bok_usage_chart_%d'% min(months)
+  if min(months) != max(months):
+    out_file=out_file+'_to_%d'% max(months)
+  out_file=out_file+'.html'
   world_map.save(out_file)
-  print('saved to '+out_file)
+  logger.info('saved to '+out_file)
 
 
 if __name__=='__main__':
