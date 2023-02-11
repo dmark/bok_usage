@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 '''login to janeway and get data'''
 from calendar import monthrange
+import re
 import requests
 import sys
 import logging
@@ -10,11 +11,14 @@ logging.basicConfig(level=logging.INFO)
 logger=logging.getLogger(__name__)
 
 def mw_token(response)-> str:
-  '''need the so called csrfmiddlewaretoken that Django puts as a hidden field in every form - its part of the security'''
-  seek="'csrfmiddlewaretoken' value='"
-  ix=response.text.find(seek)
-  tok_plus=response.text[ix+len(seek):ix+len(seek)+100]
-  tok=tok_plus[:tok_plus.find("'")]
+  '''get the so called csrfmiddlewaretoken that Django puts as a hidden field in every form - its part of the security
+  if there are no forms, then returns None'''
+  regex="'csrfmiddlewaretoken' value='([a-zA-Z0-9]*)'"
+  pattern=re.compile(regex)
+  matches=pattern.findall(response.text)
+  tok=None
+  for match in matches: # the same middleware token is placed on every form
+    tok=match
   return tok
 
 def login() -> requests.Session:
@@ -41,7 +45,8 @@ def login() -> requests.Session:
   session= requests.Session()
   response=session.get(login_url)
   tok=mw_token(response)
-  payload['csrfmiddlewaretoken']=tok
+  if tok:
+    payload['csrfmiddlewaretoken']=tok
   p = session.post(login_url, data=payload,headers=dict(Referer=login_url))
   for err,msg in errors.items():
     if err in p.text:
@@ -61,7 +66,9 @@ def read_data(session,year,month) -> str:
     parms[parm]=val
   r = session.get(geo_rpt_page,data=parms)
   tok=mw_token(r)
-  payload=dict(csrfmiddlewaretoken=tok)
+  payload={}
+  if tok:
+    payload=dict(csrfmiddlewaretoken=tok)
   p = session.post(geo_rpt_page, data=payload,headers=dict(Referer=geo_rpt_page))
   logger.info('Read CSV data for %d-%02d'%(year,month))
   return p.text
