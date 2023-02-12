@@ -44,6 +44,7 @@ def read_data():
     logger.error('File set is not contiguous months')
     sys.exit(-2)
   data.fillna(0,inplace=True)
+  data[data.columns]=data[data.columns].astype(int)
   logger.info('Data read for %d months'% len(months_12))
   return data
 
