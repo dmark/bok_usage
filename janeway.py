@@ -55,6 +55,9 @@ def login() -> requests.Session:
   logger.info('Login successful')
   return session
 
+
+
+
 def read_data(session,year,month) -> str:
   '''read CSV data for a month.
   Assumes already logged in'''
@@ -64,14 +67,15 @@ def read_data(session,year,month) -> str:
     first_last=[1,monthrange(year,month)[1]][ix]
     val='%d-%02d-%02d'%(year,month,first_last)
     parms[parm]=val
-  r = session.get(geo_rpt_page,data=parms)
-  tok=mw_token(r)
+  r = session.get(geo_rpt_page,params=parms)
   payload={}
+  tok=mw_token(r)
   if tok:
-    payload=dict(csrfmiddlewaretoken=tok)
-  p = session.post(geo_rpt_page, data=payload,headers=dict(Referer=geo_rpt_page))
+    payload['csrfmiddlewaretoken']=tok
+  p = session.post(r.url, data=payload,headers=dict(Referer=r.url))
   logger.info('Read CSV data for %d-%02d'%(year,month))
-  return p.text
+  encoded_str=p.content.decode('utf-8')
+  return encoded_str
 
 def write_data(data,path,year,month):
   '''writes the data to a file at path using the year and month as part of the file name'''
@@ -84,6 +88,7 @@ def main():
   session=login()
   out_path='data/'
   yms=range((3+12*2020),(7+12*2022))
+  #yms=range((5+12*2021),(6+12*2021))
   for ym in yms:
     y,m=divmod(ym,12)
     m+=1
