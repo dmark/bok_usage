@@ -5,7 +5,7 @@ import logging
 import matplotlib.pyplot as plt
 
 from time_series import read_data
-out_file='data/leader_usage.png'
+out_file='docs/leader_usage.png'
 logging.basicConfig(level=logging.INFO)
 logger=logging.getLogger(__name__ )
 N=20

@@ -151,7 +151,7 @@ def main():
   world_map=create_chart(df)
   #show the map
   # construct a file name
-  out_file='data/bok_usage_chart_%d'% min(months)
+  out_file='docs/bok_usage_chart_%d'% min(months)
   if min(months) != max(months):
     out_file=out_file+'_to_%d'% max(months)
   out_file=out_file+'.html'
